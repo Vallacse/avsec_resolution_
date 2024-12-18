@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Avsec Resolution</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>New Year Resolution 2025</h1>
+      <form name="resolution" id="certificate-form">
+        <label for="name">Name:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          placeholder="Enter Your Name"
+        />
+
+        <label for="photo">Upload Photo:</label>
+        <input
+          type="file"
+          id="photo"
+          name="photo"
+          accept="image/*"
+          required
+          placeholder="Upload Your Photo"
+        />
+
+        <label for="message">Resolution:</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="4"
+          required
+          placeholder="Enter Your Resolution"
+        ></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <!-- Popup Modal -->
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <h2>Welcome !</h2>
+        <p><strong>Congratulations</strong> <span id="popup-name"></span></p>
+        <p>
+          <strong>Your Resolution is:</strong>
+          <span id="popup-message" style="text-justify: auto"></span>
+        </p>
+        <img
+          id="popup-photo"
+          src=""
+          alt="User Photo"
+          style="max-width: 150px; height: auto"
+        />
+        <br />
+        <button id="print-btn">Print</button>
+        <button id="close-popup" style="background-color: red">Close</button>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
