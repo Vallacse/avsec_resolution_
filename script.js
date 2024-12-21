@@ -189,13 +189,13 @@ h1 {
 <body>
     <div class="certificate">
         <div class="header">
-            <h1>Certificate of Resolution</h1>
+            <h1>CERTIFICATE OF RESOLUTION</h1>
         </div>
         <div class="content">
             <p class="recipient">This is to certify that</p>
             <img src="${photoSrc}" alt="Recipient Photo" class="recipient-photo">
             <h2 class="name">${name}</h2>
-            <p class="has_completed">Your Resolution Is</p>
+            <p class="has_completed">My Resolution Is</p>
             <h3 class="course-name">"${message}"</h3>
         </div>
         <div class="footer">
