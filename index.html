@@ -18,6 +18,13 @@
       <label for="photo">Upload Photo:</label>
       <input type="file" id="photo" name="photo" accept="image/*" required placeholder="Upload Your Photo" />
 
+      <label for="category">Category:</label>
+      <select id="category" name="category" required onchange="checkCategoryOther()">
+        <option value="">Select Category</option>
+        <option value="Students">Students</option>
+        <option value="General">General</option>
+      </select>
+
       <label for="message">Resolution:</label>
       <select id="message" name="message" required onchange="checkOtherOption()">
         <option value="">Select Your Resolution</option>
@@ -36,16 +43,20 @@
         <option value="WRITE DOWN A DIARY OF WHAT I LEARN NEW THINGS EVERY DAY">WRITE DOWN A DIARY OF WHAT I LEARN NEW
           THINGS EVERY DAY</option>
         <option value="FOCUS ON SOCIAL SERVICE">FOCUS ON SOCIAL SERVICE</option>
-        <!-- <option value="OTHERS">OTHERS</option> -->
+        <option value="OTHERS">OTHERS</option>
       </select>
 
-      <div id="otherResolution">
+      <!-- Custom Resolution Field -->
+      <div id="otherResolution" style="display: none;">
         <label for="othermessage">Please specify your resolution:</label>
         <input type="text" id="othermessage" name="othermessage" placeholder="Enter your resolution">
-    </div>
+      </div>
+
+      <br>
 
       <button type="submit">Submit</button>
     </form>
+
   </div>
 
   <!-- Popup Modal -->
@@ -64,6 +75,8 @@
     </div>
   </div>
   <script src="./script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+
 </body>
 
 </html>

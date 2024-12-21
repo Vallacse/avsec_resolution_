@@ -230,16 +230,64 @@ h1 {
     document.getElementById("popup").style.display = "none";
 });
 
-  // JavaScript function to check if "Others" is selected and show the input field
-        function checkOtherOption() {
-            var select = document.getElementById('message');
-            var otherResolutionDiv = document.getElementById('otherResolution');
-            
-            if (select.value === 'OTHERS') {
-                // Show the input field for "Others" option
-                otherResolutionDiv.style.display = 'block';
-            } else {
-                // Hide the input field if another option is selected
-                otherResolutionDiv.style.display = 'none';
-            }
-        }
+// Show or hide custom resolution field based on "Other" selection
+function checkOtherOption() {
+    var messageValue = document.getElementById("message").value;
+    if (messageValue === "OTHERS") {
+      document.getElementById("otherResolution").style.display = "block";
+    } else {
+      document.getElementById("otherResolution").style.display = "none";
+    }
+  }
+  
+  // Show or hide custom category field based on "Other" selection
+  function checkCategoryOther() {
+    var categoryValue = document.getElementById("category").value;
+    if (categoryValue === "Other") {
+      document.getElementById("otherCategory").style.display = "block";
+    } else {
+      document.getElementById("otherCategory").style.display = "none";
+    }
+  }
+  
+  // Handle form submission
+  document.getElementById("certificate-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+  
+    // Get form values
+    var name = document.getElementById("name").value;
+    var photoFile = document.getElementById("photo").files[0];
+    var message = document.getElementById("message").value;
+    var category = document.getElementById("category").value;
+  
+    // Handle custom message (if selected "OTHERS")
+    if (message === "OTHERS") {
+      message = document.getElementById("othermessage").value;
+    }
+  
+    // Handle custom category (if selected "Other")
+    if (category === "Other") {
+      category = document.getElementById("otherCategoryInput").value;
+    }
+  
+    // Display popup with data
+    document.getElementById("popup-name").textContent = name;
+    document.getElementById("popup-message").textContent = message;
+    document.getElementById("popup-category").textContent = category;
+  
+    // Display photo preview
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      document.getElementById("popup-photo").src = e.target.result;
+    };
+    reader.readAsDataURL(photoFile);
+  
+    // Show the popup
+    document.getElementById("popup").style.display = "block";
+  });
+  
+  // Close the popup
+  document.getElementById("close-popup").addEventListener("click", function () {
+    document.getElementById("popup").style.display = "none";
+  });
+  
