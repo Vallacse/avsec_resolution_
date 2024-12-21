@@ -1,47 +1,49 @@
 // script.js
 
 document
-  .getElementById("certificate-form")
-  .addEventListener("submit", function (event) {
-    event.preventDefault();
+    .getElementById("certificate-form")
+    .addEventListener("submit", function (event) {
+        event.preventDefault();
 
-    // Get form data
-    const name = document.getElementById("name").value;
-    const photo = document.getElementById("photo").files[0];
-    const message = document.getElementById("message").value;
+        // Get form data
+        const name = document.getElementById("name").value;
+        const photo = document.getElementById("photo").files[0];
+        const message = document.getElementById("message").value;
 
-    // Display data in the popup
-    document.getElementById("popup-name").textContent = name;
-    document.getElementById("popup-message").textContent = message;
+        // Display data in the popup
+        document.getElementById("popup-name").textContent = name;
+        document.getElementById("popup-message").textContent = message;
 
-    // Show the uploaded photo in the popup
-    const photoReader = new FileReader();
-    photoReader.onload = function (e) {
-      document.getElementById("popup-photo").src = e.target.result;
-    };
 
-    if (photo) {
-      photoReader.readAsDataURL(photo);
-    }
+        // Show the uploaded photo in the popup
+        const photoReader = new FileReader();
+        photoReader.onload = function (e) {
+            document.getElementById("popup-photo").src = e.target.result;
+        };
 
-    // Display the popup
-    document.getElementById("popup").style.display = "flex";
-  });
+        if (photo) {
+            photoReader.readAsDataURL(photo);
+        }
+
+        // Display the popup
+        document.getElementById("popup").style.display = "flex";
+    });
 
 // Close the popup
 document.getElementById("close-popup").addEventListener("click", function () {
-  document.getElementById("popup").style.display = "none";
-  document.resolution.reset();
+    document.getElementById("popup").style.display = "none";
+    document.resolution.reset();
 });
 
 // Print the certificate
 document.getElementById("print-btn").addEventListener("click", function () {
-  const name = document.getElementById("popup-name").textContent;
-  const message = document.getElementById("popup-message").textContent;
-  const photoSrc = document.getElementById("popup-photo").src;
+    const name = document.getElementById("popup-name").textContent;
+    const message = document.getElementById("popup-message").textContent;
+    const photoSrc = document.getElementById("popup-photo").src;
+    // const dated = document.getElementById("date").textContent;
 
-  // Create the certificate content
-  const certificateContent = `
+    // Create the certificate content
+    const certificateContent = `
 
 
 <!DOCTYPE html>
@@ -195,11 +197,10 @@ h1 {
             <h2 class="name">${name}</h2>
             <p class="has_completed">Your Resolution Is</p>
             <h3 class="course-name">"${message}"</h3>
-            <p class="date">Issued on: December 18, 2024</p>
         </div>
         <div class="footer">
             <div class="signature">
-                <p>Authorized Signature</p>
+                <p>*Immediately do this</p>
                 <div class="signature-line"></div>
             </div>
             <div class="seal">
@@ -212,14 +213,33 @@ h1 {
 
 `;
 
-  // Open a new window and write the certificate content to it
-  const printWindow = window.open("", "", "width=800,height=600");
-  printWindow.document.write(certificateContent);
-  printWindow.document.close();
+    // Open a new window and write the certificate content to it
+    const printWindow = window.open("", "", "width=800,height=600");
+    printWindow.document.write(certificateContent);
+    printWindow.document.close();
 
-  // Trigger the print dialog
-  printWindow.print();
+    let date = new Date();
 
-  // Close the popup after printing
-  document.getElementById("popup").style.display = "none";
+    let formattedDate = date.toLocaleDateString();
+
+
+    // Trigger the print dialog
+    printWindow.print();
+
+    // Close the popup after printing
+    document.getElementById("popup").style.display = "none";
 });
+
+  // JavaScript function to check if "Others" is selected and show the input field
+        function checkOtherOption() {
+            var select = document.getElementById('message');
+            var otherResolutionDiv = document.getElementById('otherResolution');
+            
+            if (select.value === 'OTHERS') {
+                // Show the input field for "Others" option
+                otherResolutionDiv.style.display = 'block';
+            } else {
+                // Hide the input field if another option is selected
+                otherResolutionDiv.style.display = 'none';
+            }
+        }

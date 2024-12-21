@@ -1,68 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Avsec Resolution</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
-  <body>
-    <div class="container">
-      <h1>New Year Resolution 2025</h1>
-      <form name="resolution" id="certificate-form">
-        <label for="name">Name:</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          required
-          placeholder="Enter Your Name"
-        />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Avsec Resolution</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-        <label for="photo">Upload Photo:</label>
-        <input
-          type="file"
-          id="photo"
-          name="photo"
-          accept="image/*"
-          required
-          placeholder="Upload Your Photo"
-        />
+<body>
+  <div class="container">
+    <h1>New Year Resolution 2025</h1>
+    <form name="resolution" id="certificate-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required placeholder="Enter Your Name" />
 
-        <label for="message">Resolution:</label>
-        <textarea
-          id="message"
-          name="message"
-          rows="4"
-          required
-          placeholder="Enter Your Resolution"
-        ></textarea>
+      <label for="photo">Upload Photo:</label>
+      <input type="file" id="photo" name="photo" accept="image/*" required placeholder="Upload Your Photo" />
 
-        <button type="submit">Submit</button>
-      </form>
+      <label for="message">Resolution:</label>
+      <select id="message" name="message" required onchange="checkOtherOption()">
+        <option value="">Select Your Resolution</option>
+        <option value="I LIKE TO BE A SMART PERSON">I LIKE TO BE A SMART PERSON</option>
+        <option value="BUYING INDIAN PRODUCTS">BUYING INDIAN PRODUCTS</option>
+        <option value="FOCUS ON LEARNING & EARNING">FOCUS ON LEARNING & EARNING</option>
+        <option value="COMPLETE THE COMMITMENT">COMPLETE THE COMMITMENT</option>
+        <option value="TURN OFF MOBILE PHONE ONE NIGHT IN A WEEK">TURN OFF MOBILE PHONE ONE NIGHT IN A WEEK</option>
+        <option value="CONCENTRATE ON HEALTH CONSCIOUSNESS">CONCENTRATE ON HEALTH CONSCIOUSNESS</option>
+        <option value="GOING TO TRAVEL MY FAVOURITE PLACE">GOING TO TRAVEL MY FAVOURITE PLACE</option>
+        <option value="START A CREATIVE NEW HOBBY">START A CREATIVE NEW HOBBY</option>
+        <option value="FOCUS ON MYSELF. NOT OTHERS">FOCUS ON MYSELF. NOT OTHERS</option>
+        <option value="READ A BOOK IN EVERY MONTH">READ A BOOK IN EVERY MONTH</option>
+        <option value="MANAGE MY TIME WISELY">MANAGE MY TIME WISELY</option>
+        <option value="LEARN ONE NEW LANGUAGE">LEARN ONE NEW LANGUAGE</option>
+        <option value="WRITE DOWN A DIARY OF WHAT I LEARN NEW THINGS EVERY DAY">WRITE DOWN A DIARY OF WHAT I LEARN NEW
+          THINGS EVERY DAY</option>
+        <option value="FOCUS ON SOCIAL SERVICE">FOCUS ON SOCIAL SERVICE</option>
+        <!-- <option value="OTHERS">OTHERS</option> -->
+      </select>
+
+      <div id="otherResolution">
+        <label for="othermessage">Please specify your resolution:</label>
+        <input type="text" id="othermessage" name="othermessage" placeholder="Enter your resolution">
     </div>
 
-    <!-- Popup Modal -->
-    <div id="popup" class="popup">
-      <div class="popup-content">
-        <h2>Welcome !</h2>
-        <p><strong>Congratulations</strong> <span id="popup-name"></span></p>
-        <p>
-          <strong>Your Resolution is:</strong>
-          <span id="popup-message" style="text-justify: auto"></span>
-        </p>
-        <img
-          id="popup-photo"
-          src=""
-          alt="User Photo"
-          style="max-width: 150px; height: auto"
-        />
-        <br />
-        <button id="print-btn">Print</button>
-        <button id="close-popup" style="background-color: red">Close</button>
-      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <!-- Popup Modal -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <h2>Welcome !</h2>
+      <p><strong>Congratulations</strong> <span id="popup-name"></span></p>
+      <p>
+        <strong>Your Resolution is:</strong> <br> <br>
+        <span id="popup-message"></span>
+      </p>
+      <img id="popup-photo" src="" alt="User Photo" style="max-width: 150px; height: auto" />
+      <br />
+      <button id="print-btn">Print</button>
+      <button id="close-popup" style="background-color: red">Close</button>
     </div>
-    <script src="./script.js"></script>
-  </body>
+  </div>
+  <script src="./script.js"></script>
+</body>
+
 </html>
