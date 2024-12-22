@@ -69,7 +69,9 @@ body {
 }
 
 .certificate {
-    background-color: #fff;
+    background-image: url(./background.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
     width: 80%;
     max-width: 1000px;
     padding: 30px;
@@ -139,10 +141,17 @@ h1 {
 }
 
 .signature-line {
-    width: 150px;
+    width: 170px;
     border-top: 2px solid #333;
     margin-top: 5px;
 }
+
+.signature-line1 {
+    width: 100%;
+    border-top: 2px solid #333;
+    margin-top: 5px;
+}
+
 
 .seal {
     text-align: right;
@@ -150,6 +159,7 @@ h1 {
 
 .seal-img {
     max-width: 80px;
+    border-radius: 20px;
 }
 
 .recipient-photo {
@@ -157,7 +167,7 @@ h1 {
     height: 120px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid #4CAF50;
+    border: 4px solid #333;
 }
 
 
@@ -190,9 +200,10 @@ h1 {
     <div class="certificate">
         <div class="header">
             <h1>CERTIFICATE OF RESOLUTION</h1>
+            <div class="signature-line1"></div>
         </div>
         <div class="content">
-            <p class="recipient">This is to certify that</p>
+            <p class="recipient">This is to certify that</p> </br>
             <img src="${photoSrc}" alt="Recipient Photo" class="recipient-photo">
             <h2 class="name">${name}</h2>
             <p class="has_completed">My Resolution Is</p>
@@ -200,11 +211,11 @@ h1 {
         </div>
         <div class="footer">
             <div class="signature">
-                <p>*Immediately do this</p>
+                <p>AVS Engineering College</p>
                 <div class="signature-line"></div>
             </div>
             <div class="seal">
-                <img src="./logo.jpg" alt="Seal" class="seal-img">
+                <img src="./logo.png" alt="Seal" class="seal-img">
             </div>
         </div>
     </div>
@@ -324,7 +335,9 @@ body {
 }
 
 .certificate {
-    background-color: #fff;
+    background-image: url(./background.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
     width: 80%;
     max-width: 1000px;
     padding: 30px;
@@ -394,10 +407,17 @@ h1 {
 }
 
 .signature-line {
-    width: 150px;
+    width: 170px;
     border-top: 2px solid #333;
     margin-top: 5px;
 }
+
+.signature-line1 {
+    width: 100%;
+    border-top: 2px solid #333;
+    margin-top: 5px;
+}
+
 
 .seal {
     text-align: right;
@@ -405,6 +425,7 @@ h1 {
 
 .seal-img {
     max-width: 80px;
+    border-radius: 20px;
 }
 
 .recipient-photo {
@@ -412,7 +433,7 @@ h1 {
     height: 120px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid #4CAF50;
+    border: 4px solid #333;
 }
 
 
@@ -445,6 +466,7 @@ h1 {
     <div class="certificate">
         <div class="header">
             <h1>CERTIFICATE OF RESOLUTION</h1>
+            <div class="signature-line1"></div>
         </div>
         <div class="content">
             <p class="recipient">This is to certify that</p> </br>
@@ -455,11 +477,11 @@ h1 {
         </div>
         <div class="footer">
             <div class="signature">
-                <p>*Immediately do this</p>
+                <p>AVS Engineering College</p>
                 <div class="signature-line"></div>
             </div>
             <div class="seal">
-                <img src="./logo.jpg" alt="Seal" class="seal-img">
+                <img src="./logo.png" alt="Seal" class="seal-img">
             </div>
         </div>
     </div>
