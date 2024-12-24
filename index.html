@@ -1,85 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Avsec Resolution</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Avsec Resolution</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
+  <body>
+    <div class="container">
+      <h1>New Year Resolution 2025</h1>
+      <form name="resolution" id="certificate-form">
+        <label for="name">Name:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          placeholder="Enter Your Name"
+        />
 
-<body>
-  <div class="container">
-    <h1>New Year Resolution 2025</h1>
-    <form name="resolution" id="certificate-form">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required placeholder="Enter Your Name" />
+        <label for="photo">Upload Photo:</label>
+        <input
+          type="file"
+          id="photo"
+          name="photo"
+          accept="image/*"
+          required
+          placeholder="Upload Your Photo"
+        />
 
-      <label for="photo">Upload Photo:</label>
-      <input type="file" id="photo" name="photo" accept="image/*" required placeholder="Upload Your Photo" />
+        <label for="category">Category:</label>
+        <select
+          id="category"
+          name="category"
+          required
+          onchange="checkCategoryOther()"
+        >
+          <option value="">Select Category</option>
+          <option value="Students">STUDENT</option>
+          <option value="OTHERS">GENERAL</option>
+        </select>
 
-      <label for="category">Category:</label>
-      <select id="category" name="category" required onchange="checkCategoryOther()">
-        <option value="">Select Category</option>
-        <option value="Students">STUDENT</option>
-        <option value="OTHERS">GENERAL</option>
-      </select>
+        <label for="message">Resolution:</label>
+        <select
+          id="message"
+          name="message"
+          required
+          onchange="checkOtherOption()"
+        >
+          <option value="">Select Your Resolution</option>
+          <option value="Travel to my favorite places">
+            Travel to my favorite places
+          </option>
+          <option value="Read a book every month">
+            Read a book every month
+          </option>
+          <option value="Start to write diary daily">
+            Start to write diary daily
+          </option>
+          <option value="Identify my life goals and plan accordingly">
+            Identify my life goals and plan accordingly
+          </option>
+          <option value="Start to hourly schedule my daily activities">
+            Start to hourly schedule my daily activities
+          </option>
+          <option value="Spend more time to learn subject concepts in depth">
+            Spend more time to learn subject concepts in depth
+          </option>
+          <option value="Eat only healthy food and avoid junk foods">
+            Eat only healthy food and avoid junk foods
+          </option>
+          <option value="Do exercise regularly">Do exercise regularly</option>
+          <option value="Spend more time with family and listen to my parents">
+            Spend more time with family and listen to my parents
+          </option>
+          <option value="Become smart physically and intellectually">
+            Become smart physically and intellectually
+          </option>
+          <option value="Focus on learning and earning">
+            Focus on learning and earning
+          </option>
+          <option value="Learn a new language">Learn a new language</option>
+          <option value="Focus on developing myself">
+            Focus on developing myself
+          </option>
+          <option value="Start a creative hobby">Start a creative hobby</option>
+          <option value="Manage time wisely">Manage time wisely</option>
+          <option value="Do more social service">Do more social service</option>
+          <option value="OTHERS">OTHERS</option>
+        </select>
 
-      <label for="message">Resolution:</label>
-      <select id="message" name="message" required onchange="checkOtherOption()">
-        <option value="">Select Your Resolution</option>
-        <option value="I LIKE TO BE A SMART PERSON">I LIKE TO BE A SMART PERSON</option>
-        <option value="BUYING INDIAN PRODUCTS">BUYING INDIAN PRODUCTS</option>
-        <option value="FOCUS ON LEARNING & EARNING">FOCUS ON LEARNING & EARNING</option>
-        <option value="COMPLETE THE COMMITMENT">COMPLETE THE COMMITMENT</option>
-        <option value="TURN OFF MOBILE PHONE ONE NIGHT IN A WEEK">TURN OFF MOBILE PHONE ONE NIGHT IN A WEEK</option>
-        <option value="CONCENTRATE ON HEALTH CONSCIOUSNESS">CONCENTRATE ON HEALTH CONSCIOUSNESS</option>
-        <option value="GOING TO TRAVEL MY FAVOURITE PLACE">GOING TO TRAVEL MY FAVOURITE PLACE</option>
-        <option value="START A CREATIVE NEW HOBBY">START A CREATIVE NEW HOBBY</option>
-        <option value="FOCUS ON MYSELF. NOT OTHERS">FOCUS ON MYSELF. NOT OTHERS</option>
-        <option value="READ A BOOK IN EVERY MONTH">READ A BOOK IN EVERY MONTH</option>
-        <option value="MANAGE MY TIME WISELY">MANAGE MY TIME WISELY</option>
-        <option value="LEARN ONE NEW LANGUAGE">LEARN ONE NEW LANGUAGE</option>
-        <option value="WRITE DOWN A DIARY OF WHAT I LEARN NEW THINGS EVERY DAY">WRITE DOWN A DIARY OF WHAT I LEARN NEW
-          THINGS EVERY DAY</option>
-        <option value="FOCUS ON SOCIAL SERVICE">FOCUS ON SOCIAL SERVICE</option>
-        <option value="OTHERS">OTHERS</option>
-      </select>
+        <!-- Custom Resolution Field -->
+        <div id="otherResolution" style="display: none">
+          <label for="othermessage">Please specify your resolution:</label>
+          <input
+            type="text"
+            id="othermessage"
+            name="othermessage"
+            placeholder="Enter your resolution"
+          />
+        </div>
 
-      <!-- Custom Resolution Field -->
-      <div id="otherResolution" style="display: none;">
-        <label for="othermessage">Please specify your resolution:</label>
-        <input type="text" id="othermessage" name="othermessage" placeholder="Enter your resolution">
-      </div>
+        <br />
 
-      <br>
-
-      <button type="submit">Submit</button>
-    </form>
-
-  </div>
-
-  <!-- Popup Modal -->
-  <div id="popup" class="popup">
-    <div class="popup-content">
-      <h2>Welcome !</h2>
-      <p><strong>Congratulations</strong> <span id="popup-name"></span></p>
-      <p>
-        <strong>Your Resolution is:</strong> <br> <br>
-        <span id="popup-message"></span>
-      </p>
-      <img id="popup-photo" src="" alt="User Photo" style="max-width: 150px; height: auto" />
-      <br />
-      <button id="print-btn">Print</button>
-      <button id="download-btn">Download Certificate</button>
-      <button id="close-popup" style="background-color: red">Close</button>
+        <button type="submit">Submit</button>
+      </form>
     </div>
-  </div>
-  <script src="./script.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
-    integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-</body>
-
+    <!-- Popup Modal -->
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <h2>Welcome !</h2>
+        <p><strong>Congratulations</strong> <span id="popup-name"></span></p>
+        <p>
+          <strong>Your Resolution is:</strong> <br />
+          <br />
+          <span id="popup-message"></span>
+        </p>
+        <img
+          id="popup-photo"
+          src=""
+          alt="User Photo"
+          style="max-width: 150px; height: auto"
+        />
+        <br />
+        <button id="print-btn">Print</button>
+        <button id="download-btn">Download Certificate</button>
+        <button id="close-popup" style="background-color: red">Close</button>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+      integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </body>
 </html>
