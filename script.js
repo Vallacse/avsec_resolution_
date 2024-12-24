@@ -45,183 +45,154 @@ document.getElementById("print-btn").addEventListener("click", function () {
     // Create the certificate content
     const certificateContent = `
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Certificate of Achievement</title>
+    <title>Vertical Certificate</title>
     <style>
-    * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
 
-.certificate {
-    background-image: url(./background.jpeg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 80%;
-    max-width: 1000px;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    border: 5px solid #333;
-}
+        .certificate {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            background-image: url(./certificate.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 50%;
+            max-width: 800px;
+            height: 100%;
+            max-height: 1200px;
+            border: 5px solid #333;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+        }
 
-.header {
-    margin-bottom: 30px;
-}
+        .left-panel {
+            width: 20%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-left: 45px;
+            padding-top: 70px;
+            gap: 40px;
+        }
 
-.logo {
-    max-width: 150px;
-}
+        .left-panel img {
+            max-width: 60px;
+            margin-bottom: 20px;
+            border-radius: 500px;
+            padding-top: 10px;
+        }
 
-h1 {
-    font-size: 36px;
-    color: #333;
-    font-weight: bold;
-    margin-top: 10px;
-}
+        .left-panel h1 {
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+            font-size: 24px;
+            color: #333;
+            margin: 0;
+            font-weight: bold;
+        }
 
-.content {
-    margin-bottom: 30px;
-}
+        .right-panel {
+            flex: 1;
+            padding: 40px;
+            text-align: center;
+        }
 
-.recipient {
-    font-size: 20px;
-    color: #555;
-}
+        .right-panel .photo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #333;
+            margin: 10px auto;
+        }
 
-.name {
-    font-size: 32px;
-    font-weight: bold;
-    color: #333;
-    margin: 10px 0;
-}
+        .right-panel .recipient {
+            font-size: 20px;
+            color: #555;
+        }
 
-.has_completed {
-    font-size: 18px;
-    color: #555;
-}
+        .right-panel .name {
+            font-size: 28px;
+            font-weight: bold;
+            color: #333;
+            margin: 5px 0;
+        }
 
-.course-name {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-    margin: 20px 0;
-}
+        .right-panel .content {
+            font-size: 18px;
+            color: #555;
+            margin: 10px 0;
+        }
 
-.date {
-    font-size: 16px;
-    color: #777;
-}
+        .right-panel .course-name {
+            font-size: 22px;
+            font-weight: bold;
+            color: #333;
+        }
 
-.footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+        .footer {
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+        }
 
-.signature {
-    text-align: left;
-    font-size: 16px;
-}
+        .footer .signature {
+            text-align: left;
+            font-size: 16px;
+        }
 
-.signature-line {
-    width: 170px;
-    border-top: 2px solid #333;
-    margin-top: 5px;
-}
-
-.signature-line1 {
-    width: 100%;
-    border-top: 2px solid #333;
-    margin-top: 5px;
-}
-
-
-.seal {
-    text-align: right;
-}
-
-.seal-img {
-    max-width: 80px;
-    border-radius: 20px;
-}
-
-.recipient-photo {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid #333;
-}
-
-
-@media (max-width: 768px) {
-    .certificate {
-        width: 90%;
-    }
-
-    .header h1 {
-        font-size: 30px;
-    }
-
-    .name {
-        font-size: 28px;
-    }
-
-    .course-name {
-        font-size: 22px;
-    }
-
-    .recipient-photo {
-        width: 100px;
-        height: 100px;
-    }
-}
-
+        .footer .signature-line {
+            width: 150px;
+            border-top: 2px solid #333;
+            margin-top: 5px;
+        }
     </style>
 </head>
 <body>
     <div class="certificate">
-        <div class="header">
-            <h1>CERTIFICATE OF RESOLUTION</h1>
-            <div class="signature-line1"></div>
+        <!-- Left panel with vertical logo and title -->
+        <div class="left-panel">
+            <img src="./logo.png" alt="" class="">
+            <h1>Certificate of Achievement</h1>
         </div>
-        <div class="content">
-            <p class="recipient">This is to certify that</p> </br>
-            <img src="${photoSrc}" alt="Recipient Photo" class="recipient-photo">
+
+        <!-- Right panel with recipient details -->
+        <div class="right-panel">
+            <p class="recipient">This is to certify that</p>
+            <img src="${photoSrc}" alt="Recipient Photo" class="photo">
             <h2 class="name">${name}</h2>
-            <p class="has_completed">My Resolution Is</p>
+            <p class="content">has successfully completed</p>
             <h3 class="course-name">"${message}"</h3>
-        </div>
-        <div class="footer">
-            <div class="signature">
-                <p>AVS Engineering College</p>
-                <div class="signature-line"></div>
-            </div>
-            <div class="seal">
-                <img src="./logo.png" alt="Seal" class="seal-img">
+            <div class="footer">
+                <div class="signature">
+                    <p>AVS Engineering College</p>
+                </div>
             </div>
         </div>
     </div>
 </body>
 </html>
-
 `;
 
     // Open a new window and write the certificate content to it
