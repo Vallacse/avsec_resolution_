@@ -1,48 +1,48 @@
 // script.js
 
 document
-  .getElementById("certificate-form")
-  .addEventListener("submit", function (event) {
-    event.preventDefault();
+    .getElementById("certificate-form")
+    .addEventListener("submit", function (event) {
+        event.preventDefault();
 
-    // Get form data
-    const name = document.getElementById("name").value;
-    const photo = document.getElementById("photo").files[0];
-    const message = document.getElementById("message").value;
+        // Get form data
+        const name = document.getElementById("name").value;
+        const photo = document.getElementById("photo").files[0];
+        const message = document.getElementById("message").value;
 
-    // Display data in the popup
-    document.getElementById("popup-name").textContent = name;
-    document.getElementById("popup-message").textContent = message;
+        // Display data in the popup
+        document.getElementById("popup-name").textContent = name;
+        document.getElementById("popup-message").textContent = message;
 
-    // Show the uploaded photo in the popup
-    const photoReader = new FileReader();
-    photoReader.onload = function (e) {
-      document.getElementById("popup-photo").src = e.target.result;
-    };
+        // Show the uploaded photo in the popup
+        const photoReader = new FileReader();
+        photoReader.onload = function (e) {
+            document.getElementById("popup-photo").src = e.target.result;
+        };
 
-    if (photo) {
-      photoReader.readAsDataURL(photo);
-    }
+        if (photo) {
+            photoReader.readAsDataURL(photo);
+        }
 
-    // Display the popup
-    document.getElementById("popup").style.display = "flex";
-  });
+        // Display the popup
+        document.getElementById("popup").style.display = "flex";
+    });
 
 // Close the popup
 document.getElementById("close-popup").addEventListener("click", function () {
-  document.getElementById("popup").style.display = "none";
-  document.resolution.reset();
+    document.getElementById("popup").style.display = "none";
+    document.resolution.reset();
 });
 
 // Print the certificate
 document.getElementById("print-btn").addEventListener("click", function () {
-  const name = document.getElementById("popup-name").textContent;
-  const message = document.getElementById("popup-message").textContent;
-  const photoSrc = document.getElementById("popup-photo").src;
-  // const dated = document.getElementById("date").textContent;
+    const name = document.getElementById("popup-name").textContent;
+    const message = document.getElementById("popup-message").textContent;
+    const photoSrc = document.getElementById("popup-photo").src;
+    // const dated = document.getElementById("date").textContent;
 
-  // Create the certificate content
-  const certificateContent = `
+    // Create the certificate content
+    const certificateContent = `
 
 <!DOCTYPE html>
 <html lang="en">
@@ -302,92 +302,92 @@ body {
 </html>
 `;
 
-  // Open a new window and write the certificate content to it
-  const printWindow = window.open("", "", "width=800,height=600");
-  printWindow.document.write(certificateContent);
-  printWindow.document.close();
+    // Open a new window and write the certificate content to it
+    const printWindow = window.open("", "", "width=800,height=600");
+    printWindow.document.write(certificateContent);
+    printWindow.document.close();
 
-  let date = new Date();
+    let date = new Date();
 
-  let formattedDate = date.toLocaleDateString();
+    let formattedDate = date.toLocaleDateString();
 
-  // Trigger the print dialog
-  printWindow.print();
+    // Trigger the print dialog
+    printWindow.print();
 
-  // Close the popup after printing
-  document.getElementById("popup").style.display = "none";
+    // Close the popup after printing
+    document.getElementById("popup").style.display = "none";
 });
 
 // Show or hide custom resolution field based on "Other" selection
 function checkOtherOption() {
-  var messageValue = document.getElementById("message").value;
-  if (messageValue === "OTHERS") {
-    document.getElementById("otherResolution").style.display = "block";
-  } else {
-    document.getElementById("otherResolution").style.display = "none";
-  }
+    var messageValue = document.getElementById("message").value;
+    if (messageValue === "OTHERS") {
+        document.getElementById("otherResolution").style.display = "block";
+    } else {
+        document.getElementById("otherResolution").style.display = "none";
+    }
 }
 
 // Show or hide custom category field based on "Other" selection
 function checkCategoryOther() {
-  var categoryValue = document.getElementById("category").value;
-  if (categoryValue === "Other") {
-    document.getElementById("otherCategory").style.display = "block";
-  } else {
-    document.getElementById("otherCategory").style.display = "none";
-  }
+    var categoryValue = document.getElementById("category").value;
+    if (categoryValue === "Other") {
+        document.getElementById("otherCategory").style.display = "block";
+    } else {
+        document.getElementById("otherCategory").style.display = "none";
+    }
 }
 
 // Handle form submission
 document
-  .getElementById("certificate-form")
-  .addEventListener("submit", function (e) {
-    e.preventDefault();
+    .getElementById("certificate-form")
+    .addEventListener("submit", function (e) {
+        e.preventDefault();
 
-    // Get form values
-    var name = document.getElementById("name").value;
-    var photoFile = document.getElementById("photo").files[0];
-    var message = document.getElementById("message").value;
-    var category = document.getElementById("category").value;
+        // Get form values
+        var name = document.getElementById("name").value;
+        var photoFile = document.getElementById("photo").files[0];
+        var message = document.getElementById("message").value;
+        var category = document.getElementById("category").value;
 
-    // Handle custom message (if selected "OTHERS")
-    if (message === "OTHERS") {
-      message = document.getElementById("othermessage").value;
-    }
+        // Handle custom message (if selected "OTHERS")
+        if (message === "OTHERS") {
+            message = document.getElementById("othermessage").value;
+        }
 
-    // Handle custom category (if selected "Other")
-    if (category === "Other") {
-      category = document.getElementById("otherCategoryInput").value;
-    }
+        // Handle custom category (if selected "Other")
+        if (category === "Other") {
+            category = document.getElementById("otherCategoryInput").value;
+        }
 
-    // Display popup with data
-    document.getElementById("popup-name").textContent = name;
-    document.getElementById("popup-message").textContent = message;
-    document.getElementById("popup-category").textContent = category;
+        // Display popup with data
+        document.getElementById("popup-name").textContent = name;
+        document.getElementById("popup-message").textContent = message;
+        document.getElementById("popup-category").textContent = category;
 
-    // Display photo preview
-    var reader = new FileReader();
-    reader.onload = function (e) {
-      document.getElementById("popup-photo").src = e.target.result;
-    };
-    reader.readAsDataURL(photoFile);
+        // Display photo preview
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            document.getElementById("popup-photo").src = e.target.result;
+        };
+        reader.readAsDataURL(photoFile);
 
-    // Show the popup
-    document.getElementById("popup").style.display = "block";
-  });
+        // Show the popup
+        document.getElementById("popup").style.display = "block";
+    });
 
 // Close the popup
 document.getElementById("close-popup").addEventListener("click", function () {
-  document.getElementById("popup").style.display = "none";
+    document.getElementById("popup").style.display = "none";
 });
 
 document.getElementById("download-btn").addEventListener("click", function () {
-  const name = document.getElementById("popup-name").textContent;
-  const message = document.getElementById("popup-message").textContent;
-  const photoSrc = document.getElementById("popup-photo").src;
+    const name = document.getElementById("popup-name").textContent;
+    const message = document.getElementById("popup-message").textContent;
+    const photoSrc = document.getElementById("popup-photo").src;
 
-  // Create the certificate content as before
-  const certificateContent1 = `
+    // Create the certificate content as before
+    const certificateContent1 = `
 
 
  <!DOCTYPE html>
@@ -515,6 +515,15 @@ h1 {
 
 
 @media (max-width: 768px) {
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
     .certificate {
         margin-left: 50px;
         padding-left: 50px;
@@ -550,7 +559,7 @@ h1 {
             <p class="recipient">This is to certify that</p>
             <img src="${photoSrc}" alt="Recipient Photo" class="recipient-photo">
             <h2 class="name">${name}</h2>
-            <p class="has_completed">Your Resolution Is</p>
+            <p class="has_completed">My Resolution Is</p>
             <h3 class="course-name">"${message}"</h3>
         </div>
     </div>
@@ -559,26 +568,26 @@ h1 {
 
 `;
 
-  // Open a new window and write the certificate content to it
-  const printWindow = window.open("", "", "width=600,height=700");
-  printWindow.document.write(certificateContent1);
-  printWindow.document.close();
+    // Open a new window and write the certificate content to it
+    const printWindow = window.open("", "", "width=600,height=700");
+    printWindow.document.write(certificateContent1);
+    printWindow.document.close();
 
-  // Wait until the content is fully loaded in the new window
-  printWindow.onload = function () {
-    // Use html2canvas to capture the content as an image
-    html2canvas(printWindow.document.body).then(function (canvas) {
-      // Convert the canvas to JPG format
-      const imgData = canvas.toDataURL("image/jpeg");
+    // Wait until the content is fully loaded in the new window
+    printWindow.onload = function () {
+        // Use html2canvas to capture the content as an image
+        html2canvas(printWindow.document.body).then(function (canvas) {
+            // Convert the canvas to JPG format
+            const imgData = canvas.toDataURL("image/jpeg");
 
-      // Create a link to download the image
-      const link = document.createElement("a");
-      link.href = imgData;
-      link.download = "certificate.jpg"; // Set the filename
-      link.click(); // Trigger the download
+            // Create a link to download the image
+            const link = document.createElement("a");
+            link.href = imgData;
+            link.download = "certificate.jpg"; // Set the filename
+            link.click(); // Trigger the download
 
-      // Close the print window after downloading the image
-       printWindow.close();
-    });
-  };
+            // Close the print window after downloading the image
+            printWindow.close();
+        });
+    };
 });
