@@ -522,13 +522,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh;
+    height: 100vh;
 }
     .certificate {
         margin-left: 50px;
         padding-left: 50px;
         width: 600px;
-        height: 800px;
+        height: 900px;
     }
     
     .course-name {
