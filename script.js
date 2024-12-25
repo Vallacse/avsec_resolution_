@@ -409,7 +409,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 130vh;
+    height: 100vh;
 }
 
 .certificate {
@@ -516,7 +516,7 @@ h1 {
 
 @media (max-width: 768px) {
     .certificate {
-        width: 600px;
+        width: 500px;
         height: 800px;
     }
 }
