@@ -516,24 +516,8 @@ h1 {
 
 @media (max-width: 768px) {
     .certificate {
-        width: 90%;
-    }
-
-    .header h1 {
-        font-size: 30px;
-    }
-
-    .name {
-        font-size: 28px;
-    }
-
-    .course-name {
-        font-size: 22px;
-    }
-
-    .recipient-photo {
-        width: 100px;
-        height: 100px;
+        width: 500px;
+        height: 500px;
     }
 }
 
@@ -555,7 +539,7 @@ h1 {
 `;
 
   // Open a new window and write the certificate content to it
-  const printWindow = window.open("", "", "width=800,height=600");
+  const printWindow = window.open("", "", "width=400,height=400");
   printWindow.document.write(certificateContent1);
   printWindow.document.close();
 
