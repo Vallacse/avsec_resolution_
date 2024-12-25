@@ -540,7 +540,7 @@ h1 {
 `;
 
   // Open a new window and write the certificate content to it
-  const printWindow = window.open("", "", "width=400,height=400");
+  const printWindow = window.open("", "", "width=600,height=700");
   printWindow.document.write(certificateContent1);
   printWindow.document.close();
 
