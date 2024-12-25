@@ -526,7 +526,7 @@ h1 {
     font-size: 24px;
     font-weight: bold;
     color: #333;
-    margin: 20px 120px;
+    margin: 20px 50px;
     width: 400px;
     display: flex;
     align-items: center;
