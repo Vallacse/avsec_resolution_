@@ -797,12 +797,12 @@ document.getElementById("download-btn").addEventListener("click", function () {
 
       // Create a link to download the image
       const link = document.createElement("a");
-    //   link.href = imgData;
+      link.href = imgData;
       link.download = "certificate.jpg"; // Set the filename
       link.click(); // Trigger the download
 
       // Close the print window after downloading the image
-    //   printWindow.close();
+       printWindow.close();
     });
   };
 });
