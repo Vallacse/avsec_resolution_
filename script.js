@@ -522,7 +522,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 70vh;
+    height: 100vh;
 }
     .certificate {
         margin-left: 50px;
