@@ -516,9 +516,16 @@ h1 {
 
 @media (max-width: 768px) {
     .certificate {
-        border: 50px;
+        margin: 20px 20px 20px 20px;
         width: 600px;
         height: 800px;
+    }
+}
+
+@media (max-width: 520px) {
+    .certificate {
+        width: 400px;
+        height: 600px;
     }
 }
 
