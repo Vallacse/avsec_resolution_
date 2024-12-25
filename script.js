@@ -516,8 +516,8 @@ h1 {
 
 @media (max-width: 768px) {
     .certificate {
-        width: 500px;
-        height: 500px;
+        width: 400px;
+        height: 900px;
     }
 }
 
