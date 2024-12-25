@@ -527,7 +527,7 @@ h1 {
     font-weight: bold;
     color: #333;
     margin: 20px 120px;
-    width: 300px;
+    width: 400px;
     display: flex;
     align-items: center;
     text-align: center;
