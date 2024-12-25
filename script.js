@@ -521,6 +521,18 @@ h1 {
         width: 600px;
         height: 800px;
     }
+    
+    .course-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin: 20px 120px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
 }
 
 @media (max-width: 520px) {
