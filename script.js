@@ -528,7 +528,7 @@ body {
         margin-left: 50px;
         padding-left: 50px;
         width: 600px;
-        height: 900px;
+        height: 1000px;
     }
     
     .course-name {
