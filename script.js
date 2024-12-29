@@ -255,7 +255,7 @@ body {
             <p class="recipient">This is to certify that</p>
             <img src="${photoSrc}" alt="Recipient Photo" class="recipient-photo">
             <h2 class="name">${name}</h2>
-            <p class="has_completed">My Resolution Is</p>
+            <p class="has_completed">Resolution Is</p>
             <h3 class="course-name">"${message}"</h3>
         </div>
     </div>
