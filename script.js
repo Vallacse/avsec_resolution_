@@ -163,8 +163,8 @@ h1 {
     font-size: 24px;
     font-weight: bold;
     color: #333;
-    margin: 20px 120px;
-    width: 350px;
+    margin: 10px 90px;
+    width: 300px;
     display: flex;
     align-items: center;
     text-align: center;
@@ -265,7 +265,7 @@ body {
 `;
 
     // Open a new window and write the certificate content to it
-    const printWindow = window.open("", "", "width=300,height=600");
+    const printWindow = window.open("", "", "width=600,height=600");
     printWindow.document.write(certificateContent1);
     printWindow.document.close();
 
