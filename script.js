@@ -229,7 +229,7 @@ body {
     color: #333;
     display: flex;
     align-items: center;
-    text-align: center;
+    text-align: start;
     justify-content: center;
 }
 }
