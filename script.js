@@ -222,8 +222,9 @@ body {
         width: 100%;
         height: 80vh;
         display: flex;
-        align-items: start;
-        text-align: start;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
     }
     
     .course-name {
