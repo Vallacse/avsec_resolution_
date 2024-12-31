@@ -216,17 +216,17 @@ h1 {
         font-family: 'Arial', sans-serif;
         background-color: #fff;
         height: 100vh;
-        width: 90%;
+        width: 100%;
         display: flex;
     }
     .certificate {
-        width: 100%;
+        width: 120%;
         height: 800px;
         display: flex;
         align-items: center;
         text-align: center;
         justify-content: center;
-        margin: 10%;
+        margin: 0%;
     }
 
     .content {
