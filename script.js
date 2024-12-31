@@ -229,7 +229,7 @@ body {
     }
 
     .content {
-    margin-top: 30%;
+    margin-bottom: 30%;
 }
     
     .course-name {
