@@ -265,7 +265,7 @@ body {
 `;
 
     // Open a new window and write the certificate content to it
-    const printWindow = window.open("", "");
+    const printWindow = window.open("", "", "width=300,height=600");
     printWindow.document.write(certificateContent1);
     printWindow.document.close();
 
