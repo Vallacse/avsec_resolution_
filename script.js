@@ -219,6 +219,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    width: 100%;
 }
     .certificate {
         margin-left: 50px;
