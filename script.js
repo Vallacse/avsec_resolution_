@@ -227,6 +227,7 @@ h1 {
         text-align: center;
         justify-content: center;
         margin: 50%;
+        padding-left: 10%;
     }
 
     .content {
