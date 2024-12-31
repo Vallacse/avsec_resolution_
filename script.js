@@ -210,7 +210,7 @@ h1 {
 }
 
 
-@media (max-width: 700px) {
+@media (max-width: 600px) {
 
 body {
     font-family: 'Arial', sans-serif;
@@ -227,8 +227,7 @@ body {
     font-size: 24px;
     font-weight: bold;
     color: #333;
-    margin: 20px 50px;
-    width: 400px;
+    width: 200px;
     display: flex;
     align-items: center;
     text-align: center;
@@ -261,7 +260,7 @@ body {
 `;
 
     // Open a new window and write the certificate content to it
-    const printWindow = window.open("", "", "width=600,height=600");
+    const printWindow = window.open("", "", "width=500,height=500");
     printWindow.document.write(certificateContent1);
     printWindow.document.close();
 
