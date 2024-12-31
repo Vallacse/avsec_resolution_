@@ -226,7 +226,7 @@ h1 {
         align-items: center;
         text-align: center;
         justify-content: center;
-        margin: 0%;
+        margin: 50%;
     }
 
     .content {
