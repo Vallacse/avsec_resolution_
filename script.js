@@ -224,12 +224,12 @@ body {
     }
     
     .course-name {
-    font-size: 24px;
+    font-size: 18px;
     font-weight: bold;
     color: #333;
     display: flex;
     align-items: center;
-    text-align: start;
+    text-align: center;
     justify-content: center;
 }
 }
