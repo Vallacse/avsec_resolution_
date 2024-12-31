@@ -230,7 +230,7 @@ h1 {
     }
 
     .content {
-        margin-bottom: 50%;
+        margin-bottom: 45%;
     }
     
     .course-name {
