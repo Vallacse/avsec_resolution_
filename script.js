@@ -211,12 +211,11 @@ h1 {
 
 
 @media (max-width: 650px) {
-
      body {
         font-family: 'Arial', sans-serif;
         background-color: #fff;
         height: 100vh;
-        width: 100%;
+        width: 120%;
         display: flex;
     }
     .certificate {
