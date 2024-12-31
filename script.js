@@ -255,7 +255,7 @@ body {
             <p class="recipient">This is to certify that</p>
             <img src="${photoSrc}" alt="Recipient Photo" class="recipient-photo">
             <h2 class="name">${name}</h2>
-            <p class="has_completed">Resolution Is</p>
+            <p class="has_completed">My Resolution Is</p>
             <h3 class="course-name">"${message}"</h3>
         </div>
     </div>
@@ -266,6 +266,7 @@ body {
 
     // Open a new window and write the certificate content to it
     const printWindow = window.open("", "");
+    printWindow.document.write(certificateContent1);
     printWindow.document.close();
 
     // Wait until the content is fully loaded in the new window
