@@ -210,7 +210,7 @@ h1 {
 }
 
 
-@media (max-width: 900px) {
+@media (max-width: 700px) {
 
 body {
     font-family: 'Arial', sans-serif;
@@ -219,7 +219,7 @@ body {
     width: 100%;
 }
     .certificate {
-        width: 600px;
+        width: 100%;
         height: 800px;
     }
     
