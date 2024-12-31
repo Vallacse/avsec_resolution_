@@ -227,6 +227,10 @@ body {
         justify-content: center;
         margin-left: 20px;
     }
+
+    .content {
+    margin-top: 30%;
+}
     
     .course-name {
     font-size: 18px;
