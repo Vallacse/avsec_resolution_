@@ -237,6 +237,13 @@ h1 {
        font-weight: bold;
        color: #333;
     }
+
+    .name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0;
+}
 }
 
     </style>
