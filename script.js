@@ -229,8 +229,8 @@ body {
     }
 
     .content {
-    margin-bottom: 35%;
-    margin-left: 10%;
+    margin-bottom: 40%;
+    margin-left: 20%;
 }
     
     .course-name {
