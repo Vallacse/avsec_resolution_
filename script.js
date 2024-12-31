@@ -220,13 +220,10 @@ body {
 }
     .certificate {
         width: 100%;
-        height: 80vh;
+        height: 100vh;
         display: flex;
-        align-items: center;
-        text-align: center;
-        justify-content: center;
-        padding-top: 150px;
-        padding-left: 80px;
+        align-items: start;
+        text-align: start;
     }
     
     .course-name {
