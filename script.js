@@ -212,12 +212,12 @@ h1 {
 
 @media (max-width: 600px) {
 
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #fff;
-    height: 100vh;
-    width: 100%;
-}
+     body {
+        font-family: 'Arial', sans-serif;
+        background-color: #fff;
+        height: 100vh;
+        width: 100%;
+    }
     .certificate {
         width: 100%;
         height: 800px;
@@ -229,15 +229,15 @@ body {
     }
 
     .content {
-    margin-bottom: 50%;
-    margin-left: 30%;
-}
+        margin-bottom: 50%;
+        margin-left: 30%;
+    }
     
     .course-name {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-}
+       font-size: 18px;
+       font-weight: bold;
+       color: #333;
+    }
 }
 
     </style>
