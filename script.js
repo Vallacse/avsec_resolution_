@@ -221,7 +221,7 @@ h1 {
     }
     .certificate {
         width: auto;
-        height: 800px;
+        height: 750px;
         display: flex;
         align-items: center;
         text-align: center;
