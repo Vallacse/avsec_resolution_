@@ -216,7 +216,7 @@ h1 {
         font-family: 'Arial', sans-serif;
         background-color: #fff;
         height: 100vh;
-        width: 100%;
+        width: 90%;
         display: flex;
     }
     .certificate {
@@ -226,6 +226,7 @@ h1 {
         align-items: center;
         text-align: center;
         justify-content: center;
+        margin: 10%;
     }
 
     .content {
