@@ -227,16 +227,15 @@ h1 {
         text-align: center;
         justify-content: center;
         margin: 50%;
-        padding-left: 10%;
     }
 
     .content {
         margin-bottom: 50%;
-        margin-left: 25%;
+        margin-left: 20%;
     }
     
     .course-name {
-       font-size: 18px;
+       font-size: 20px;
        font-weight: bold;
        color: #333;
     }
