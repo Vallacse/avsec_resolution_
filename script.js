@@ -231,11 +231,10 @@ h1 {
 
     .content {
         margin-bottom: 50%;
-        margin-left: 20%;
     }
     
     .course-name {
-       font-size: 20px;
+       font-size: 22px;
        font-weight: bold;
        color: #333;
     }
