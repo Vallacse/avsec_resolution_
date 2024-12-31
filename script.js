@@ -225,8 +225,8 @@ body {
         align-items: center;
         text-align: center;
         justify-content: center;
-        margin-top: 150px;
-        margin-left: 80px;
+        padding-top: 150px;
+        padding-left: 80px;
     }
     
     .course-name {
