@@ -218,13 +218,10 @@ h1 {
         height: 100vh;
         width: 100%;
         display: flex;
-        align-items: center;
-        text-align: center;
-        justify-content: center;
     }
     .certificate {
         width: 100%;
-        height: 750px;
+        height: 800px;
         display: flex;
         align-items: center;
         text-align: center;
