@@ -227,7 +227,6 @@ body {
     font-size: 24px;
     font-weight: bold;
     color: #333;
-    width: 250px;
     display: flex;
     align-items: center;
     text-align: center;
