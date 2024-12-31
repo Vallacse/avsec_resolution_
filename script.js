@@ -210,7 +210,7 @@ h1 {
 }
 
 
-@media (max-width: 750px) {
+@media (max-width: 650px) {
 
      body {
         font-family: 'Arial', sans-serif;
