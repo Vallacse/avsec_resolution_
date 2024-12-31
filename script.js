@@ -220,7 +220,7 @@ h1 {
         display: flex;
     }
     .certificate {
-        width: 120%;
+        width: auto;
         height: 800px;
         display: flex;
         align-items: center;
